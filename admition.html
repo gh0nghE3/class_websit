@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Admission</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        input, select {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            outline: none;
+        }
+        input::placeholder {
+            color: rgba(234, 219, 219, 0.7);
+        }
+        button {
+            background: #ff7eb3;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: #ff4f8b;
+        }
+        select option {
+            background: white;
+            color: black;
+        }
+        p {
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Class Admission Form</h2>
+        <form id="admissionForm">
+            <input type="text" id="name" placeholder="Your Name" required><br><br>
+            <input type="text" id="address" placeholder="Your address" required><br><br>
+            <input type="number" id="Age" placeholder="Age"><br><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" inputmode="numeric"
+                placeholder="Enter Contact number" required><br><br>
+            <input type="email" id="email" placeholder="Your Email" required><br><br>
+            <select id="course" required>
+                <option value="">Select a Course</option>
+                <option value="Ms-Cit">Ms-Cit</option>
+                <option value="Advance Tally">Advance Tally</option>
+                <option value="Business Tally">Business Tally</option>
+                <option value="Advance Excel">Advance Excel</option>
+                <option value="Klic Intership">Klic Intership</option>
+            </select><br><br>
+            <button type="submit">Apply Now</button>
+        </form>
+        <p id="message"></p>
+    </div>
+</body>
+</html>

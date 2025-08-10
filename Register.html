@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<style>
+    /* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0f1c;
+    color: #495d64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: rgba(0, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #00f0ff;
+    box-shadow: 0 0 15px #00f0ff, 0 0 30px #00c0ff inset;
+    width: 350px;
+    text-align: center;
+}
+
+/* Heading */
+.container h2 {
+    color: #00f0ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #00f0ff, 0 0 15px #00c0ff;
+}
+
+/* Input Fields & Select */
+.container input[type="text"],
+.container input[type="number"],
+.container input[type="tel"],
+.container input[type="email"],
+.container input[type="password"],
+.container select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #00f0ff;
+    border-radius: 8px;
+    background: transparent;
+    color: #e0f7ff;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #00f0ff;
+    outline: none;
+    transition: 0.3s;
+    appearance: none;
+}
+
+.container input:focus,
+.container select:focus {
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00c0ff;
+}
+
+/* Checkbox */
+.container input[type="checkbox"] {
+    accent-color: #00f0ff;
+    margin-left: 5px;
+}
+
+/* Button */
+.container button {
+    width: 100%;
+    padding: 12px;
+    background: #00f0ff;
+    border: none;
+    color: #000;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00c0ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background: #00c0ff;
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00c0ff;
+}
+
+/* Select Dropdown Arrow */
+.container select {
+    background-image: linear-gradient(45deg, transparent 50%, #484e4f 50%),
+                      linear-gradient(135deg, #3e4344 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(50% - 3px),
+                         calc(100% - 15px) calc(50% - 3px);
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* Placeholder text */
+::placeholder {
+    color: rgba(224, 247, 255, 0.7);
+}
+
+</style>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="RegistrationForm">
+            <input type="text" id="name" placeholder="Your Name" required><br><br>
+            <input type="text" id="address" placeholder="Your address" required><br><br>
+            <input type="number" id="Age" placeholder="Age"><br><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" inputmode="numeric"
+                placeholder="Enter Contact number" required><br><br>
+            <input type="email" id="email" placeholder="Your Email" required><br><br>
+            <input type="password" id="mypassword" placeholder="Enter password" required>
+            <input type="checkbox" onclick="togglePassword()"> Show Password <br><br>
+            <select id="course" required>
+                <option value="">Select Branch</option>
+                <option value="Ghatkopar Branch">Ghatkopar Branch</option>
+                <option value="Thane Branch">Thane Branch</option>
+            </select><br><br>
+            <button type="Register">Register</button>
+        </form>
+    </div>
+
+    <script>
+function togglePassword() {
+    let passField = document.getElementById("mypassword");
+    if (passField.type === "password") {
+        passField.type = "text"; // Show password
+    } else {
+        passField.type = "password"; // Hide password
+    }
+}
+</script>
+</body>
+
+</html>

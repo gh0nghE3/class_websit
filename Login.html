@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0f1c; /* Dark background */
+    color: #e0f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(0, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #00f0ff;
+    box-shadow: 0 0 15px #00f0ff, 0 0 30px #00c0ff inset;
+    text-align: center;
+    width: 320px;
+}
+
+/* Heading */
+.container h2 {
+    color: #00f0ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #00f0ff, 0 0 15px #00c0ff;
+}
+
+/* Input Fields */
+.container input[type="email"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #00f0ff;
+    border-radius: 8px;
+    background: transparent;
+    color: #e0f7ff;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #00f0ff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.container input[type="email"]:focus,
+.container input[type="password"]:focus {
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00c0ff;
+}
+
+/* Checkbox */
+.container input[type="checkbox"] {
+    accent-color: #00f0ff;
+}
+
+/* Buttons */
+.container button {
+    width: 100%;
+    padding: 12px;
+    background: #00f0ff;
+    border: none;
+    color: #000;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00c0ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background: #00c0ff;
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00c0ff;
+}
+
+/* Link Styling */
+.container a {
+    color: #00f0ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container a:hover {
+    text-shadow: 0 0 5px #00f0ff, 0 0 10px #00c0ff;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h2>Login Form</h2>
+        <form id="LoginForm">
+            <input type="email" id="email" placeholder="Your Email" required><br><br>
+            <input type="password" id="mypassword" placeholder="Enter password" required>
+            <input type="checkbox" onclick="togglePassword()"> Show Password
+            <br><br>
+            <button type="Login">Login</button><br><br>
+            Don't have an account <a href="Register.html" target="_blank"> sign up</a>
+    </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            let passField = document.getElementById("mypassword");
+            if (passField.type === "password") {
+                passField.type = "text"; // Show password
+            } else {
+                passField.type = "password"; // Hide password
+            }
+        }
+    </script>
+</body>
+
+</html>
